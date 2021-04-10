@@ -1,9 +1,0 @@
-<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
-<os:ShortName>GV30</os:ShortName>
-<os:Description>Google Verbatim (30 results per page)</os:Description>
-<os:InputEncoding>UTF-8</os:InputEncoding>
-<os:Image width="16" height="16">data:image/x-icon;base64,R0lGODlhEAAQAOMAAAAAABgYtRgYrRgYlBBSMcaEMQhKKTFaKcZ7Mb17MRBKKYxzKQAAAAAAAAAAAAAAACH5BAEAAAAALAAAAAAQABAAAARGEMhAq7y36iBwphjXhaAnnKR3DUOqAqyrxt8Lt18w05fAYawBQeULBguGA9E4MCASB4XtYnAuDsopoJqASrVVBMKglVSrEQA7</os:Image>
-<SearchForm>http://www.google.com</SearchForm>
-<os:Url type="text/html" method="GET" template="http://www.google.com/search?tbs=li:1&amp;num=30&amp;q={searchTerms}" resultDomain="google.com">
-</os:Url>
-</SearchPlugin>
