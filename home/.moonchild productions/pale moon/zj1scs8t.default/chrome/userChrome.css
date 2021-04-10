@@ -1,0 +1,102 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/*spacing and transparency*/
+
+.tabbrowser-tab:not([selected="true"]):not([pinned="true"])
+{
+  background: transparent!important;
+  border-top: transparent !important;
+  border-right: transparent !important;
+  border-left: transparent !important;
+}
+
+.tabbrowser-tab:not([selected="true"]):not([pinned="true"]):hover
+{
+  border: 1px solid rgba(50, 50, 50, .15) !important;
+  background-image: -moz-linear-gradient(
+    rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 95%) !important;
+  margin-top: 1px !important;
+  margin-bottom: -1px !important;
+}
+
+.tabbrowser-tab
+{
+  margin-top: 2px !important;
+}
+
+.tabbrowser-tab[selected="true"]
+{
+  margin-top: 1px !important;
+ /* Space over tabs and under URL-tab */;
+}
+
+.tabbrowser-tab[selected="true"][pinned="true"] .tab-icon-image
+{
+  margin-bottom: 0px !important;
+}
+
+.tabbrowser-tab[pending], .alltabs-item[pending]
+{
+  opacity: 0.4 !important;
+}
+
+.tabbrowser-tab[pending] .tab-icon-image, .alltabs-item[pending] .tab-icon-image
+{
+  filter: url("chrome://mozapps/skin/extensions/extensions.svg#greyscale");
+}
+
+.tabs-newtab-button
+{
+  background: transparent !important;
+  border-color: transparent !important;
+  -moz-border-image: none !important;
+}
+
+#tabbrowser-tabs ~ #alltabs-button {display:none!important;}
+
+
+@-moz-document url("chrome://browser/content/browser.xul") {
+     #urlbar:not([focused]) .urlbar-input-box {
+         text-align: center;
+     }
+ }
+
+#urlbar, #urlbar-container {
+margin-left: 120px !important;
+margin-right: 120px !important;
+
+
+}
+
+ #urlbar[focused=true] {
+     border-color: #3B4252 !important;
+     border-width: 1px !important;
+ }
+
+/*
+Highlight the currently-selected tab
+ */
+
+ tab{
+     -moz-appearance: none!important;
+ }
+
+ tab[selected="true"]{
+     color: #4D5362  !important;
+ }
+
+
+    downloads-button { 
+
+  color: #3B4252 !important
+}
+
+
+
+#content browser{
+    margin-right:-14px!important;
+    margin-bottom:-14px!important;
+    overflow-y:scroll;
+    overflow-x:hidden;
+ }
+

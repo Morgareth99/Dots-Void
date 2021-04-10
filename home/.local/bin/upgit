@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for dir in ./*/
+do
+  (
+  cd "$dir" || exit
+  git status >/dev/null 2>&1
+  [ "$(printf "%s" "$?")" -eq 0 ] && printf "%s" "Updating ${dir%*/}..." && git pull
+  )
+done

@@ -1,0 +1,148 @@
+;==============================================================+
+;                                                              +
+;                                                              +
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗     +
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗    +
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝    +
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗    +
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║    +
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝    +
+;                                                              +
+;                                                              +
+;==============================================================+
+
+[colors]
+background-alt            = #EEEEEF
+background-urgent         = #434c5e
+foreground-alt            = #3b4252
+
+[bar/morgareth]
+monitor                   = ${env:MONITOR:HDMI-1}
+width                     = 100%
+height                    = 35
+offset-x                  = 0
+offset-y                  = 0
+radius                    = 0
+dpi                       = 96
+fixed-center              = true
+background                = ${colors.foreground-alt}
+foreground                = ${colors.background-alt}
+pin-workspaces            = true
+enable-scroll             = true
+wm-restack                = bspwm
+module-margin-left        = 0
+module-margin-right       = 0
+margin-top                = 0
+margin-bottom             = 0
+spacing                   = 2
+line-size                 = 1
+
+font-0                    = PragmataPro for Powerline:style=Bold:size=9;1
+font-1                    = icomoon:style=Regular:size=9;1
+
+modules-left              = bspwm  
+modules-center            = mpc 
+modules-right             = upd mem cpu vol date power  
+override-redirect         = true
+enable-ipc                = true
+locale                    = pt_BR.UTF-8
+
+[module/mpc]
+type                      = custom/script
+exec                      = mpcn
+interval                  = 1
+format                    = <label>
+format-prefix             = " "
+format-prefix-background  = ${colors.foreground-alt}
+format-prefix-foreground  = #e5e9f0
+format-padding            = 2
+label-font = 1
+
+[module/cpu]
+type                      = internal/cpu
+label                     = %percentage%%
+format-prefix             = " "
+format-prefix-foreground  = #81a1c1
+format-padding            = 1
+label-font = 1
+
+[module/mem]
+type                      = custom/script
+interval                  = 1
+format                    = <label>
+format-prefix             = " "
+format-prefix-background  = ${colors.foreground-alt}
+format-prefix-foreground  = #88c0d0
+format-padding            = 1
+exec                      = free -m | awk '/Mem/ { printf("%3.1f%%", $3/$2*100) }'
+label-font = 1
+
+[module/date]
+type                      = custom/script
+interval                  = 1
+exec                      = echo "Today $(date +%H:%M)"
+format                    = <label>
+format-prefix             = 
+format-prefix-foreground  = #B1D1EA
+format-padding            = 1
+click-left                = ~/.config/polybar/date.sh &
+label-font = 1
+
+[module/vol]
+type                      = custom/script
+interval                  = 1
+exec                      = amixer -M -c0 | awk 'NR==6{gsub(/\[|\]/,"");print$5}'
+format                    = <label>
+format-prefix             = " "
+format-prefix-foreground  = #5e81ac
+format-padding            = 1
+label-font                = 1
+
+[module/upd]
+type                      = custom/script
+interval                  = 4600 
+exec                      = updates
+format                    = <label>
+format-prefix             = " "
+format-prefix-foreground  = #8fbcbb
+format-padding            = 1
+label-font                = 1
+
+[module/bspwm]
+type                      = internal/bspwm
+format                    = <label-state> <label-mode>
+reverse-scroll            = false
+ws-icon-0                 = CHAT;%{F#bf616a}
+ws-icon-1                 = TERM;%{F#d08770}
+ws-icon-2                 = WEB;%{F#ebcb8b}
+ws-icon-3                 = CODE;%{F#a3be8c}
+ws-icon-4                 = OTHER;%{F#b48ead}
+label-focused             = %icon%
+label-focused-padding     = 2
+label-occupied            = %icon%
+label-occupied-padding    = 2
+label-occupied-foreground = #ffffff
+label-urgent              = %icon%
+label-urgent-background   = ${colors.background-urgent}
+label-urgent-padding      = 2
+label-empty               = %icon%
+label-empty-padding       = 2
+label-monocle             = 
+label-monocle-padding     = 2
+label-monocle-background  = ${colors.foreground-alt}
+label-monocle-foreground  = ${colors.background-alt}
+label-floating            = 
+label-floating-padding    = 2
+label-floating-background = ${colors.foreground-alt}
+label-floating-foreground = #EEEEEF
+label-font                = 1
+label-focused-underline   = #d8dee9
+
+[module/power]
+type                     = custom/text
+content                  =""
+content-padding          = 2
+content-foreground       = #eceff4
+content-background       = #434c5e
+click-left               = clearine &
+click-right              = betterlockscreen -l dim & 

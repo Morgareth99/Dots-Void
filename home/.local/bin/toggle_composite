@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if pgrep xcompmgr &>/dev/null; then
+    echo "Turning xcompmgr OFF"
+    pkill xcompmgr &
+else
+    echo "Turning xcompmgr ON"
+    xcompmgr -cCfF -t-9 -l-11 -r5 -o 0.18 -l-6 -t-4 -D8 -I 0.020 -O 0.020 &
+fi
+
+exit 0

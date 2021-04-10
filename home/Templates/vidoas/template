@@ -1,0 +1,16 @@
+# Template file for 'vidoas'
+pkgname=vidoas
+version=1.0
+revision=1
+depends="opendoas pam"
+short_desc="Edits a doas.conf file and autochecks it for errors before saving"
+maintainer="Morgareth99 <morgareth@tutanota.com>"
+license="BSD-2-Clause"
+homepage="https://github.com/le0me55i/vidoas"
+distfiles="https://github.com/Morgareth99/vidoas/archive/refs/tags/v${version}.tar.gz"
+checksum=66e9fd6731b05b6b782f3c251e244a7798a37521e4038110ebf53d888d71fd4c
+
+do_install() {
+	vbin $pkgname
+	vlicense LICENSE
+}

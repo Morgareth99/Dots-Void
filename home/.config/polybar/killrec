@@ -1,0 +1,3 @@
+#!/bin/bash
+
+notify-send "Ending screencast ..." && pkill -9 ffmpeg

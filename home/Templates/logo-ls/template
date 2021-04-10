@@ -1,0 +1,22 @@
+# Template file for 'logo-ls'
+pkgname=logo-ls
+version=1.3.7
+revision=1
+#archs="x86_64"
+#wrksrc=logols-${version}
+build_style=go
+#go_import_path="github.com/Yash-Handa/logo-ls"
+#go_package="${go_import_path}/cmd/${pkgname}"
+hostmakedepends="git"
+makedepends="go"
+#depends=""
+short_desc="Modern ls command with vscode like file icon"
+maintainer="Morgareth99 <thiagors1983@gmail.com>"
+license="MIT"
+homepage="https://github.com/Yash-Handa/logo-ls"
+distfiles="https://github.com/Yash-Handa/logo-ls/archive/refs/tags/v1.3.7.tar.gz"
+checksum=
+
+post_install() {
+        vlicense LICENSE
+}

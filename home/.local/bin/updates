@@ -1,0 +1,10 @@
+#!/bin/bash
+
+VOID_UPDATE=$(xbps-install -un |perl -lne 'END { print $. }')
+PACKAGES=$(("$VOID_UPDATE"))
+
+if [ "$PACKAGES" != "0" ]; then
+    echo "$PACKAGES updates"
+else
+    echo "Updated"
+fi

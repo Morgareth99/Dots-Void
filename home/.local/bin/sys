@@ -1,0 +1,101 @@
+#!/bin/bash
+#                           ██            ████                
+#                          ░░            ░██░                 
+#   ██████  ██   ██  ██████ ██ ███████  ██████  ██████ 
+#  ██░░░░  ░░██ ██  ██░░░░ ░██░░██░░░██░░░██░  ██░░░░██
+# ░░█████   ░░███  ░░█████ ░██ ░██  ░██  ░██  ░██   ░██
+#  ░░░░░██   ░██    ░░░░░██░██ ░██  ░██  ░██  ░██   ░██
+#  ██████    ██     ██████ ░██ ███  ░██  ░██  ░░██████ 
+# ░░░░░░   ██      ░░░░░░  ░░ ░░░   ░░   ░░    ░░░░░░  
+#        ░░      
+#
+#  ▓▓▓▓▓▓▓▓▓▓
+# ░▓ author ▓ xero <x@xero.nu>
+# ░▓ code   ▓ http://code.xero.nu/dotfiles
+# ░▓ mirror ▓ http://git.io/.files
+# ░▓ mod    ▓ morgareth <morgareth@tutanota.com>
+# ░▓▓▓▓▓▓▓▓▓▓
+# ░░░░░░░░░░░
+
+#
+#█▓▒░ vars
+FULL=━
+EMPTY=━
+
+NAME=$(whoami)
+HOST=$(< /proc/sys/kernel/hostname)
+DISTRO=$(awk -F'"' '/PRETTY_NAME/{print $2,"linux"}'</etc/os-release|sed -r 's/\<./\U&/g')
+#INIT=$(strings /sbin/init|awk 'match($0, /(runit|openrc|systend)/) {print (substr($0, RSTART, RLENGTH));exit; }')
+INIT=$(ps u --pid 1 | awk 'NR==2{print $NF}'| perl -nle 'print ucfirst lc')
+UPTIME=$(awk '{printf("%d:%02d:%02d:%02d",($1/60/60/24),($1/60/60%24),($1/60%60),($1%60))}' /proc/uptime)
+RESOLUTION=$(xrandr --current | sed -n 's/.* connected \([0-9]*\)x\([0-9]*\)+.*/\1x\2/p')
+KERNEL=$(uname -r)
+PKGS=$(xbps-query -l | wc -l)
+WM=$(wmctrl -m | awk 'NR==1 {print $2}' | perl -nle 'print ucfirst lc')
+SHELL=$(echo "$SHELL" | awk -F '/' '{print $3}' | perl -nle 'print ucfirst lc')
+
+
+#█▓▒░ progress bar
+draw()
+{
+  perc=$1
+  size=$2
+  inc=$(( perc * size / 100 ))
+  out=
+  if [ -z "$3" ]
+  then
+    color="36"
+  else
+    color="$3"
+  fi 
+  for v in $(seq 0 $(( size - 1 ))); do
+    test "$v" -le "$inc"   \
+    && out="${out}\\e[1;${color}m${FULL}" \
+    || out="${out}\\e[0;${color}m${EMPTY}"
+  done
+  printf "$out"
+}
+
+#█▓▒░ greets
+printf "\\n\\n"
+printf " \\e[0m  hello \\e[36m$NAME\\033[0m, i'm \\e[34m$HOST\\n"
+printf " \\e[0m\\n"
+
+#█▓▒░ environment
+printf " \\e[1;33m      Distro \\e[0m$DISTRO\\n"
+printf " \\e[1;33m      Kernel \\e[0m$KERNEL\\n"
+printf " \\e[1;33m        Init \\e[0m$INIT\\n"
+printf " \\e[1;33m    Packages \\e[0m$PKGS\\n"
+printf " \\e[1;33m          Wm \\e[0m$WM\\n"
+printf " \\e[1;33m       Shell \\e[0m$SHELL\\n"
+printf " \\e[1;33m  Resolution \\e[0m$RESOLUTION\\n"
+printf " \\e[1;33m      Uptime \\e[0m$UPTIME\\n"
+printf " \\e[0m\\n"
+
+#█▓▒░ cpu
+cpu=$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}')
+c_lvl=$( LC_NUMERIC="en_US.UTF-8" printf "%.0f" "$cpu")
+printf "   \\e[0;36m%-4s \\e[1;36m%-5s %-25s \\n" " cpu" "$c_lvl%" "$(draw "$c_lvl" 15)" 
+
+#█▓▒░ ram
+ram=$(free | awk '/Mem.:/ {print int($3/$2 * 100.0)}')
+printf "   \\e[0;36m%-4s \\e[1;36m%-5s %-25s \\n" " ram" "$ram%" "$(draw "$ram" 15)" 
+
+#█▓▒░ hd
+hd=$(df -h | grep "$1" | awk 'NR==5{gsub(/%/,""); print $5}')
+printf "   \\e[0;36m%-4s \\e[1;36m%-5s %-25s \\n" " hd" "$hd%" "$(draw "$ram" 15)"
+
+#█▓▒░ temperature
+temp=$(sensors | awk '/Core 0/ {gsub(/\+/,"",$3); gsub(/\..+/,"",$3)    ; print $3}')
+case $1 in
+  $((temp <= 50)))
+    color='34'
+    ;;
+  $((temp >= 75)))
+    color='31'
+    ;;
+  *)
+    color='36'
+    ;;
+esac
+printf "   \\e[0;${color}m%-4s \\e[1;${color}m%-5s %-25s \\n\\n" "temp" "$temp°c " "$(draw "$temp" 15 $color)"

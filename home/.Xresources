@@ -1,0 +1,94 @@
+! ╻ ╻┏━┓┏━╸┏━┓┏━┓╻ ╻┏━┓┏━╸┏━╸┏━┓!
+! ┏╋┛┣┳┛┣╸ ┗━┓┃ ┃┃ ┃┣┳┛┃  ┣╸ ┗━┓!
+! ╹ ╹╹┗╸┗━╸┗━┛┗━┛┗━┛╹┗╸┗━╸┗━╸┗━┛!
+! by Morgareh                   !
+!-------------------------------!
+
+!! ----------------------------------------------------------------------------!!
+!! Xft (font) settings
+!! ----------------------------------------------------------------------------!!
+
+Xft.antialias:  1
+Xft.autohint:   0
+Xft.dpi:        96
+Xft.hinting:    1
+Xft.hintstyle:  hintfull
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       rgb
+
+st.font:			PragmataPro for Powerline:pixelsize=12:antialias=true:autohint=true
+st.bold_font:			0
+st.termname:		xterm-256color
+st.shell:			/bin/sh
+st.bellvolume:			100
+st.tabspaces:			8
+st.chscale:			1.0
+st.cwscale:			1.0
+
+
+!SXIV COLORS
+Sxiv.font         : PragmataPro for Powerline:pixelsize=12:antialias=true:autohint=true
+Sxiv.foreground   : #3B4252
+Sxiv.background   : #3B4252
+sxiv.bar_bg_color : #FFFFFF
+sxiv.bar_fg_color : #3B4252
+
+
+! COLOR SCHEME
+! black > red > green > yellow > blue > magenta > cyan > white
+#define black0                    #2E3440
+#define black1                    #3B4252
+#define black2                    #434C5E
+#define black3                    #4C566A
+#define red0                      #FA5AA4
+#define red1                      #FA74B2
+#define green0                    #2BE491
+#define green1                    #44EB9F
+#define yellow0                   #FA946E
+#define yellow1                   #FAA687
+#define blue0                     #63C5EA
+#define blue1                     #7ACBEA
+#define magenta0                  #CF8EF4
+#define magenta1                  #D8A6F4
+#define cyan0                     #89CCF7
+#define cyan1                     #A1D5F7
+#define white0                    #F9F9F9
+#define white1                    #F7F7F7
+#define white2                    #F4F4F4
+
+st.color1:                         red0
+st.color2:                         green0
+st.color3:                         yellow0
+st.color4:                         blue0
+st.color5:                         magenta0
+st.color6:                         cyan0
+
+st.color9:                         red1
+st.color10:                        green1
+st.color11:                        yellow1
+st.color12:                        blue1
+st.color13:                        magenta1
+st.color14:                        cyan1
+
+! FOR REVERSING ONLY (BLACK-WHITE)
+! --------------------------------
+st.foreground:                     white0
+st.background:                     black0
+st.cursorColor:                    white0
+
+st.color0:                         black2
+
+st.color7:                         white1
+
+st.color8:                         black3
+st.color15:                        white2
+
+!*.foreground:                     black0
+!*.background:                     white0
+!*.cursorColor:                    black0
+
+!*.color0:                         white1
+!*.color7:                         black2
+
+!*.color8:                         white2
+!*.color15:                        black3

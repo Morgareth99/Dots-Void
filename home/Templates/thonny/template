@@ -1,0 +1,20 @@
+# Template file for 'thonny'
+pkgname=thonny
+version=3.3.6
+revision=1
+wrksrc=thonny-${version}
+build_style=python3-module
+hostmakedepends="python3-setuptools"
+depends="hicolor-icon-theme	python3-mypy python3-astroid python-asttokens \
+python-docutils python3-jedi python3-pip python3-pylint python3-pyserial \
+python3-send2trash python3-setuptools python3-tkinter"
+short_desc="Python IDE for beginners"
+maintainer="Morgareth99 <morgareth@tutanota.com>"
+license="MIT"
+homepage="https://thonny.org"
+distfiles="https://github.com/thonny/thonny/archive/refs/tags/v${version}.tar.gz"
+checksum=772a11f42c71ddc0ca28104db51dde25ea31245d0a1fd8ce132526fa1922b3ea
+
+post_install() {
+	vlicense LICENSE.txt LICENSE
+}

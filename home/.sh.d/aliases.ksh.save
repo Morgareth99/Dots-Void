@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# aliases
+alias sk='. ${HOME}/.kshrc'
+alias ls='ls -F -a --color=auto'
+alias extract='dtrx'
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias autogit="git add Funtoo-Dots && git commit -m ':construction:' && git push origin master"
+alias empty='echo -n Taking out teh trash | pv -qL 10 && rm -rf  ~/.local/share/Trash/files'
+alias calc='python -qi -c "from math import *"'
+alias ducks='du -cksh * | sort -hr | head -n 15' 
+
+#Common errors
+alias cd..='cd ..'
+alias ...='cd ..'
+alias ....='cd ../..'

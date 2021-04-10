@@ -1,0 +1,17 @@
+# Template file for 'nordic-theme'
+pkgname=nordic-theme
+version=1.9.0
+revision=1
+wrksrc="Nordic"
+short_desc="Elegant theme created using the Nord color pallete"
+maintainer="Morgareth99 <morgareth@tutanota.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/EliverLara/Nordic"
+distfiles="https://github.com/EliverLara/Nordic/releases/download/v${version}/Nordic.tar.xz"
+checksum=c7ea5c4816ce6fb0c2763e77908485c2ee816790f727009429137bc2131ca18b
+
+do_install() {
+		vmkdir usr/share/themes/
+		rm README.md
+		vcopy  . usr/share/themes/Nordic
+}

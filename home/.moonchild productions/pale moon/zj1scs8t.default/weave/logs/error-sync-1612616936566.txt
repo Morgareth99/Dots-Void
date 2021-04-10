@@ -1,0 +1,147 @@
+1612616881352	Sync.Service	INFO	Loading Weave 1.45.0
+1612616881358	Sync.Engine.Clients	DEBUG	Engine initialized
+1612616881362	Sync.Engine.Clients	DEBUG	Resetting clients last sync time
+1612616881374	Sync.Engine.Bookmarks	DEBUG	Engine initialized
+1612616881378	Sync.Engine.Forms	DEBUG	Engine initialized
+1612616881384	Sync.Engine.History	DEBUG	Engine initialized
+1612616881392	Sync.Engine.Passwords	DEBUG	Engine initialized
+1612616881396	Sync.Engine.Prefs	DEBUG	Engine initialized
+1612616881400	Sync.Engine.Tabs	DEBUG	Engine initialized
+1612616881402	Sync.Engine.Tabs	DEBUG	Resetting tabs last sync time
+1612616881408	Sync.Engine.Addons	DEBUG	Engine initialized
+1612616881410	Sync.Service	INFO	Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Goanna/4.8 Firefox/68.0 PaleMoon/29.0.0
+1612616881414	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1612616881416	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616881416	Sync.Service	DEBUG	Caching URLs under storage user base: https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/
+1612616881416	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616881418	Sync.Tracker.History	INFO	Adding Places observer.
+1612616881484	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616881484	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616881946	Sync.Engine.Greasemonkey	DEBUG	Engine initialized
+1612616886502	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616886536	Sync.Service	DEBUG	User-Agent: Pale Moon/29.0.0 FxSync/1.45.0.20210130143735.
+1612616886536	Sync.Service	INFO	Starting sync at 2021-02-06 10:08:06
+1612616886536	Sync.Service	DEBUG	In sync: should login.
+1612616886546	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616886546	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616886548	Sync.Service	INFO	Logging in the user.
+1612616886548	Sync.Service	DEBUG	Caching URLs under storage user base: https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/
+1612616886548	Sync.Service	DEBUG	Fetching unlocked auth state returned success.status_ok
+1612616887602	Sync.SyncScheduler	DEBUG	Next sync in 90000 ms.
+1612616887894	Sync.Resource	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/info/collections
+1612616887894	Sync.Resource	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/info/collections
+1612616887896	Sync.Service	DEBUG	Fetching global metadata record
+1612616888502	Sync.Resource	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/meta/global
+1612616888502	Sync.Resource	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/meta/global
+1612616888504	Sync.Service	DEBUG	Clearing cached meta record. metaModified is undefined, setting to 1612579824.66
+1612616889030	Sync.Resource	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/meta/global
+1612616889030	Sync.Resource	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/meta/global
+1612616889030	Sync.Service	DEBUG	Weave Version: 1.45.0 Local Storage: 5 Remote Storage: 5
+1612616889030	Sync.Service	INFO	Sync key is up-to-date: no need to upgrade.
+1612616889030	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1612616889030	Sync.Service	INFO	Testing info/collections: {"bookmarks":1612579760.36,"clients":1612579941.08,"crypto":1612579751.96,"forms":1612579762.23,"greasemonkey":1612579755.41,"history":1612616203.76,"meta":1612579824.66,"passwords":1612579757.62,"prefs":1612579756.57,"tabs":1612616202.51}
+1612616889030	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 0
+1612616889030	Sync.Service	INFO	collection keys reports that a key update is needed.
+1612616889360	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616889760	Sync.Resource	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/crypto/keys
+1612616889760	Sync.Resource	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/crypto/keys
+1612616889760	Sync.CollectionKeyManager	INFO	Updating collection keys...
+1612616889810	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1612579751.96.
+1612616889810	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1612616889810	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1612616889810	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1612616889810	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1612616889810	Sync.CollectionKeyManager	INFO	Bumping last modified to 1612579751.96
+1612616889810	Sync.CollectionKeyManager	INFO	Collection keys updated.
+1612616889810	Sync.Status	DEBUG	Status.login: success.login => success.login
+1612616889810	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616889812	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616889812	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1612616889814	Sync.Status	INFO	Resetting Status.
+1612616889814	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616890312	Sync.Resource	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/info/collections
+1612616890312	Sync.Resource	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/info/collections
+1612616890324	Sync.Service	DEBUG	Fetching global metadata record
+1612616890324	Sync.Service	DEBUG	Weave Version: 1.45.0 Local Storage: 5 Remote Storage: 5
+1612616890324	Sync.Service	INFO	Sync key is up-to-date: no need to upgrade.
+1612616890324	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1612616890324	Sync.Service	INFO	Testing info/collections: {"bookmarks":1612579760.36,"clients":1612579941.08,"crypto":1612579751.96,"forms":1612579762.23,"greasemonkey":1612579755.41,"history":1612616203.76,"meta":1612579824.66,"passwords":1612579757.62,"prefs":1612579756.57,"tabs":1612616202.51}
+1612616890326	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 1612579751.96
+1612616890326	Sync.Synchronizer	DEBUG	Refreshing client list.
+1612616890326	Sync.Engine.Clients	DEBUG	First sync, uploading all items
+1612616890326	Sync.Engine.Clients	INFO	1 outgoing items pre-reconciliation
+1612616890948	Sync.Collection	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/clients?full=1
+1612616890948	Sync.Collection	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/clients?full=1
+1612616890948	Sync.Engine.Clients	INFO	Records: 2 applied, 2 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1612616890954	Sync.Engine.Clients	INFO	Uploading all of 1 records
+1612616890954	Sync.Collection	DEBUG	POST Length: 485
+1612616891326	Sync.Tracker.Clients	DEBUG	Saving changed IDs to clients
+1612616891554	Sync.Collection	DEBUG	mesg: POST success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/clients
+1612616891554	Sync.Collection	DEBUG	POST success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/clients
+1612616891556	Sync.Synchronizer	INFO	Updating enabled engines: 2 clients.
+1612616891560	Sync.Engine.Greasemonkey	INFO	0 outgoing items pre-reconciliation
+1612616891562	Sync.Engine.Greasemonkey	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1612616891562	Sync.Engine.Prefs	INFO	0 outgoing items pre-reconciliation
+1612616891564	Sync.Engine.Prefs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1612616891566	Sync.Engine.Passwords	INFO	0 outgoing items pre-reconciliation
+1612616891568	Sync.Engine.Passwords	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1612616891570	Sync.Engine.Tabs	DEBUG	First sync, uploading all items
+1612616891570	Sync.Engine.Tabs	INFO	1 outgoing items pre-reconciliation
+1612616892258	Sync.Store.Tabs	DEBUG	Adding remote tabs from Pale Moon de morgareth no machine
+1612616892268	Sync.Collection	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/tabs?full=1
+1612616892268	Sync.Collection	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/tabs?full=1
+1612616892270	Sync.Engine.Tabs	INFO	Records: 1 applied, 1 successfully, 0 failed to apply, 0 newly failed to apply, 1 reconciled.
+1612616892294	Sync.Engine.Tabs	INFO	Uploading all of 1 records
+1612616892296	Sync.Collection	DEBUG	POST Length: 504
+1612616892560	Sync.Tracker.Greasemonkey	DEBUG	Saving changed IDs to greasemonkey
+1612616892574	Sync.Tracker.Passwords	DEBUG	Saving changed IDs to passwords
+1612616892800	Sync.Collection	DEBUG	mesg: POST success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/tabs
+1612616892800	Sync.Collection	DEBUG	POST success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/tabs
+1612616892806	Sync.Engine.Bookmarks	INFO	0 outgoing items pre-reconciliation
+1612616892812	Sync.Engine.Bookmarks	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1612616892826	Sync.Engine.Forms	INFO	24 outgoing items pre-reconciliation
+1612616892828	Sync.Engine.Forms	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1612616892918	Sync.Engine.Forms	INFO	Uploading all of 24 records
+1612616892922	Sync.Collection	DEBUG	POST Length: 6665
+1612616893434	Sync.Collection	DEBUG	mesg: POST success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/forms
+1612616893436	Sync.Collection	DEBUG	POST success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/forms
+1612616893436	Sync.Engine.Forms	DEBUG	Records that will be uploaded again because the server couldn't store them: /Jv1VvSCSQiAgADN, /SM4u+hNSjKck1NT, /ThNKxsiSnKdB0bj, /dCJr5WhTXeAw72a, 1W/NkbAuT4qRCWhR, 2CuYdT2CQJm/Qusa, 55/7QfEwQ/SmmEKN, BlTK+VEcTOqHoU/Q, F1knOJ24S6q/gVDu, GAfmzWA1Qqi/TxoF, K/Hdc2k4Sx2ZSejN, K3lfatITT/Kz6TlL, Kd/+ziThRgu5++Uu, LRHpe/cCSKCTMyDa, La/PgEiaRm+oBXG+, PEr/BlbgSxC7a6sd, WZw/x4tNQSyBejr1, d9D2vx4CS9qi6b/E, nNfwmsY7TKW/z1N/, q0Sk/huNSdG9IVGG, s0WygO/vRMmtVktm, u0/jfpJJS62Jg75V, xP1/HiiERRKh/UaG, zD7DT9mNQyqx/O1r
+1612616893440	Sync.Engine.History	DEBUG	First sync, uploading all items
+1612616893732	Sync.SyncScheduler	DEBUG	Next sync in 90000 ms.
+1612616893810	Sync.Tracker.Bookmarks	DEBUG	Saving changed IDs to bookmarks
+1612616894440	Sync.Tracker.Forms	DEBUG	Saving changed IDs to forms
+1612616896072	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616904004	Sync.Engine.History	INFO	5000 outgoing items pre-reconciliation
+1612616905206	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616909748	Sync.Engine.History	WARN	DATA LOSS: Both local and remote changes to record: abBxP2OWW8tR
+1612616913246	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616919146	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616923290	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616928344	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616930910	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616933056	Sync.Collection	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history?full=1&limit=5000
+1612616933056	Sync.Collection	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history?full=1&limit=5000
+1612616933838	Sync.Tracker.History	DEBUG	Saving changed IDs to history
+1612616933912	Sync.Collection	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history?sort=index&limit=5000
+1612616933912	Sync.Collection	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history?sort=index&limit=5000
+1612616934382	Sync.Engine.History	ERROR	Failed to read JSON records to fetch: : null
+1612616934956	Sync.Engine.History	WARN	DATA LOSS: Both local and remote changes to record: _6ituqfK_Q3M
+1612616935120	Sync.Collection	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history?full=1&ids=_6ituqfK_Q3M,_8PbbIkktDJs,_8eUECFTlTdX,ZWmv3othtDCu,_qKHOAVlyMDu,_AHI9GDjgKNS,zzAdUtBDiaGw,_TTbfhtzdsxs,_H-6_CRngrkk,_rabzQ7EoZHz,ZYrwwzaancjM,_9iz7z01wcqp,_QNepLfX3_JK,_4eGWZbnkoQy,_IU2APKn8UDe,z_77ol0yTRe3,ZZX5C_3EH2Jy,zxOv6yHy62pq,_qMr7EYCqklj,_cq1XLX5Gr8h,_ldailncW-dI,zvSf7OwPHZWM,zwXBRYy3Uox0,_9fJPTMSNPfe,_HfshA67AR62,__A3Mll9U9u6,_eUxVT9_8n1w,_W4WaXAyytPl,_EcimMVUTnrK,_hrHyoLp2ObZ,zZujMDQU2Pty,ZYMX88Wb4U_n,_Ki6_zl5KpiL,_hT7XPwevlov,_YKYXcvCT_4u,zwMpg_zXLz7T,zZ1mSVhqZPpv,zXNrHPsKlUyp,_zEQjqYKFtj4,_E7pkdylLyCC,_7Sgoc4HsJ4o,ZXnmj12k7BGD,_AjBtQMF-b4I,zwZrZwb8FxvX,ZY1ZNah1dNn3,zZiSspPX4UrQ,Zx5VBebVOAV9,_OCxUUS_nPzy,_tTYmtf88WPZ,_Zm8cWg2wXFi
+1612616935120	Sync.Collection	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history?full=1&ids=_6ituqfK_Q3M,_8PbbIkktDJs,_8eUECFTlTdX,ZWmv3othtDCu,_qKHOAVlyMDu,_AHI9GDjgKNSâ¦
+1612616935134	Sync.Engine.History	ERROR	Failed to read JSON records to fetch: : null
+1612616935828	Sync.Collection	DEBUG	mesg: GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history?full=1&ids=_cAMO7mEdiQT,_uwiNfcW5jtM,_z8ddlpCb7n8,_heY5pk0yCQm,_JSC97RylIID,_uniDr96rleX,_HmWDrs5JvRK,_eiYueYgipEX,_5QNd_q4UqD4,zzE-Sk1Ajh4v,_TYZcL2HsTYx,_U4ZtLDwbEMe,_OZ5qbYQjp93,_f0U3-c_NRKL,_Mqi6Bq2A3pF,_1hfCeDvbNGO,_6bZ6aiAO4Tl,_9SX6K5OPpd1,ZwDDulAkPNAr,_Z88kfeX8n6J,_flPjfdelejE,_IGGQ_ReRlLu,_SDe2mNls8sc,_NhF9HQIyBM9,_vK_UMaAjz5U,Zz1J7leVuKpD,ZxgZY_NOUwsd,_2sXVZC9-j1O,ZZFQGiNT4GMD,__X4ARG1iUzX,_pPha-tE_QVX,_P9XnzCTzO-I,_nfIrEwli55x,_vFKNaEYRRIb,_lQFJ50Ks78I,_bcc3-iCbQCe,Zwnt95LrC0lh,ZZvFSEnjEVvI,_gn1AUt-A3Iu,_GWf43s_pYbY,_HC5rgK865_C,ZxqC9_sWl79X,_BY--fVLe1jI,_JAhFO6DjcHj,ZxadIm0lK9rG,_mdVNtox3BuO,_bdb0fG2-Xnw,_ZFEp9FXWCxM,_ZqGLL7QfHcp
+1612616935828	Sync.Collection	DEBUG	GET success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history?full=1&ids=_cAMO7mEdiQT,_uwiNfcW5jtM,_z8ddlpCb7n8,_heY5pk0yCQm,_JSC97RylIID,_uniDr96rleXâ¦
+1612616935838	Sync.Engine.History	ERROR	Failed to read JSON records to fetch: : null
+1612616935996	Sync.Engine.History	INFO	Records: 3 applied, 3 successfully, 0 failed to apply, 0 newly failed to apply, 5096 reconciled.
+1612616936040	Sync.Engine.History	INFO	Uploading all of 13 records
+1612616936044	Sync.Collection	DEBUG	POST Length: 10008
+1612616936554	Sync.Collection	DEBUG	mesg: POST success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history
+1612616936554	Sync.Collection	DEBUG	POST success 200 https://pmsync.palemoon.org/sync/index.php/1.1/xhalnqj7fbthzfsylybh3v6lznmpyeml/storage/history
+1612616936558	Sync.Status	DEBUG	Status.sync: success.sync => success.sync
+1612616936558	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1612616936558	Sync.Synchronizer	INFO	Sync completed at 2021-02-06 10:08:56 after 46.74 secs.
+1612616936562	Sync.Declined	DEBUG	Handling remote declined: []
+1612616936562	Sync.Declined	DEBUG	Handling local declined: []
+1612616936562	Sync.Declined	DEBUG	Declined changed? false
+1612616936564	Sync.Service	INFO	No change to declined engines. Not reuploading meta/global.
+1612616936564	Sync.SyncScheduler	DEBUG	Next sync in 90000 ms.

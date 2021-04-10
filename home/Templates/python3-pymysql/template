@@ -1,0 +1,21 @@
+# Template file for 'python3-pymysql'
+pkgname=python3-pymysql
+version=1.0.2
+revision=1
+wrksrc=PyMySQL-${version}
+build_style=python3-module
+#hostmakedepends="python3-setuptools"
+makedepends="python3-devel python3-setuptools"
+depends="python mariadb python3-cryptography python3-pynacl python3-pytest"
+checkdepends="python3-pytest mariadb"
+short_desc="Pure Python MySQL Client"
+maintainer="Morgareth99 <thiagors1983@gmail.com>"
+license="MIT"
+homepage="https://github.com/PyMySQL/PyMySQL/"
+distfiles="https://files.pythonhosted.org/packages/60/ea/33b8430115d9b617b713959b21dfd5db1df77425e38efea08d121e83b712/PyMySQL-1.0.2.tar.gz"
+#distfiles="${PYPI_SITE}/p/PyMySQL/PyMySQL-${version}.tar.gz"
+checksum=816927a350f38d56072aeca5dfb10221fe1dc653745853d30a216637f5d7ad36
+
+post_install() {
+        vlicense LICENSE
+}

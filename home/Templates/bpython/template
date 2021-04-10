@@ -1,0 +1,18 @@
+# Template file for 'bpython'
+pkgname=bpython
+version=0.20
+revision=4
+build_style=python3-module
+hostmakedepends="python3-setuptools"
+depends="python3-Pygments python-requests python3-curtsies python3-greenlet python-six \
+python3-jedi python3-watchdog python3-xdg python3-pyperclip"
+short_desc="Fancy ncurses interface to the Python interpreter"
+maintainer="Morgareth99 <thiagors1983@gmail.com>"
+license="MIT"
+homepage="https://bpython-interpreter.org/"
+distfiles="${PYPI_SITE}/b/bpython/bpython-${version}.tar.gz"
+checksum=fec7d97be9912a50d8f5b34ca10d70715c99a33f0cd0b9e4977c1b0f617fa913
+
+ post_install() {
+	 vlicense LICENSE.txt LICENSE
+ }

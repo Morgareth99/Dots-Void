@@ -1,0 +1,80 @@
+<UserScriptConfig>
+	<Script author="noname120" basedir="AntiAdware" checkRemoteUpdates="1" dependhash="91a5fddca119dd4cac162c1c6f218fc9fe37daf3" description="Remove forced download accelerators, managers, and adware on supported websites" enabled="true" filename="AntiAdware.user.js" installTime="1610686932000" modified="1610686932000" name="AntiAdware" namespace="HandyUserscripts" noframes="false" runAt="document-start" updateMetaStatus="ok" userOverride="false" uuid="85efdb42-5f00-46aa-bdf1-fdf3741811a6" version="1.42.1" installurl="https://greasyfork.org/scripts/4294-antiadware/code/AntiAdware.user.js" homepageurl="https://github.com/HandyUserscripts/AntiAdware#readme" icon="tq7PJr0.png" updateurl="https://greasyfork.org/scripts/4294-antiadware/code/AntiAdware.user.js">
+		<Grant>GM_addStyle</Grant>
+		<Grant>unsafeWindow</Grant>
+		<Include>http*://*180upload.com/*</Include>
+		<Include>http*://*4upfiles.com/*</Include>
+		<Include>http*://*get*.adobe.com/*flashplayer/*</Include>
+		<Include>http*://*get*.adobe.com/*reader/*</Include>
+		<Include>http*://*afterdawn.com/software/*</Include>
+		<Include>http*://*akafile.com/akago.php</Include>
+		<Include>http*://*chip.de/downloads/*</Include>
+		<Include>http*://*clicknupload.com/*</Include>
+		<Include>http*://*cloudyvideos.com/*</Include>
+		<Include>http*://*coolrom.com/*/*</Include>
+		<Include>http*://*clipconverter.cc/download/*</Include>
+		<Include>http*://*dailyuploads.net/*</Include>
+		<Include>http*://*datafilehost.com/d/*</Include>
+		<Include>http*://*davvas.com/*</Include>
+		<Include>http*://*d-h.st/*</Include>
+		<Include>http*://*download.cnet.com/*</Include>
+		<Include>http*://*telecharger.cnet.com/*</Include>
+		<Include>http*://*descargar.cnet.com/*</Include>
+		<Include>http*://*de.download.cnet.com/*</Include>
+		<Include>http*://*filefactory.com/file/*</Include>
+		<Include>http*://*filescdn.com/*</Include>
+		<Include>http*://*filehippo.com/*download*</Include>
+		<Include>http*://*freewarefiles.com/downloads_counter.php*</Include>
+		<Include>http*://*google.*/earth/download/ge/agree.html</Include>
+		<Include>http*://*hugefiles.net/*</Include>
+		<Include>http*://*hulkload.com/*</Include>
+		<Include>http*://*kingfiles.net/*</Include>
+		<Include>http*://*letitbit.net/download/*</Include>
+		<Include>http*://*loveroms.com/*</Include>
+		<Include>http*://*up.media1fire.com/*</Include>
+		<Include>http*://*mightyupload.com/*</Include>
+		<Include>http*://*mp3fil.*/get/*</Include>
+		<Include>http*://*mp3juices.to/*</Include>
+		<Include>http*://*mp3olimp.net/*</Include>
+		<Include>http*://*mp3olimpz.com/*</Include>
+		<Include>http*://*opensubtitles.org/*/subtitles/*</Include>
+		<Include>http*://*revclouds.com/*</Include>
+		<Include>http*://*romhustler.net/download/*</Include>
+		<Include>http*://*romhustler.net/rom/*</Include>
+		<Include>http*://*secureupload.eu/*</Include>
+		<Include>http*://*sendspace.com/file/*</Include>
+		<Include>http*://*sharebeast.com/*</Include>
+		<Include>http*://*shared.com/*</Include>
+		<Include>http*://*softm8.com*</Include>
+		<Include>http*://*.softonic.*</Include>
+		<Include>http*://*sourceforge.net/*</Include>
+		<Include>http*://*tusfiles.net/*</Include>
+		<Include>http*://*unlimitzone.com/*</Include>
+		<Include>http*://*uploading.com/*</Include>
+		<Include>http*://*uploadocean.com/*</Include>
+		<Include>http*://*uplod.ws/*</Include>
+		<Include>http*://*uploads.to/*</Include>
+		<Include>http*://*uptobox.com/*</Include>
+		<Include>http*://*userscdn.com/*</Include>
+		<Include>http*://*ziddu.com/downloadfile/*</Include>
+		<Require filename="jquery-2.0.3.min.js"/>
+		<Description lang="fr">Évitez les applications indésirables lors des téléchargements sur de nombreux sites avec AntiAdware !</Description>
+		<Name lang="fr">AntiAdware</Name>
+		<Description lang="de">Mit AntiAdware vermeidest du auf zahlreichen Webseiten den versehentlichen Download von unerwünschten Programmen</Description>
+		<Name lang="de">AntiAdware</Name>
+		<Description lang="zh-TW">AntiAdware, 讓你避免在許多網站上意外下載到廣告軟體.</Description>
+		<Name lang="zh-TW">AntiAdware</Name>
+		<Description lang="zh-CN">AntiAdware, 让你避免在许多网站上意外下载到广告软体.</Description>
+		<Name lang="zh-CN">AntiAdware</Name>
+	</Script>
+	<Script author="fuzetsu" basedir="Auto_Close_YouTube_Ads" checkRemoteUpdates="1" dependhash="db4db1e2ba22d7e080813ecb27cf911f89fce657" description="Close and/or Mute YouTube ads automatically!" enabled="true" filename="Auto_Close_YouTube_Ads.user.js" installTime="1616344335000" modified="1616344335000" name="Auto Close YouTube Ads" namespace="http://fuzetsu.acypa.com" noframes="false" runAt="document-end" updateMetaStatus="ok" userOverride="false" uuid="f5faf866-37b8-4e79-84dd-bd3bfcecc3b5" version="1.4.2" installurl="https://greasyfork.org/scripts/9165-auto-close-youtube-ads/code/Auto%20Close%20YouTube%20Ads.user.js" updateurl="https://greasyfork.org/scripts/9165-auto-close-youtube-ads/code/Auto%20Close%20YouTube%20Ads.user.js">
+		<Exclude>*://*.youtube.com/subscribe_embed?*</Exclude>
+		<Grant>GM_getValue</Grant>
+		<Grant>GM_setValue</Grant>
+		<Grant>GM_deleteValue</Grant>
+		<Grant>GM_registerMenuCommand</Grant>
+		<Match>*://*.youtube.com/*</Match>
+		<Require filename="wait-for-elements.js"/>
+		<Require filename="gm_config.js"/>
+	</Script>
+</UserScriptConfig>

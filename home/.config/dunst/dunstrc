@@ -1,0 +1,59 @@
+[global]
+    monitor = 0
+    geometry = "350x20-10+95"
+    #corner_radius = 20
+    alignment = center
+    indicate_hidden = yes
+    shrink = yes
+    transparency = 0
+    separator_height = 2
+    padding = 10
+    horizontal_padding = 12
+    frame_width = 1
+    separator_color = auto
+    frame_color = "#3b4252"
+    sort = yes
+    idle_threshold = 120
+    font =  PragmataPro for Powerline 9 
+    format = "%s\n%b"
+    #format = "<span size='x-large' font_desc='PragmataPro for Powerline 8' weight='bold' foreground='#f9f9f9'>%s</span>\n%b"
+    show_age_threshold = 60
+    word_wrap = yes
+    ignore_newline = no
+    stack_duplicates = false
+    hide_duplicate_count = false
+    show_indicators = yes
+    icon_position = left
+    max_icon_size = 0
+    icon_path = /usr/share/icons/Papirus/16x16/status/:/usr/share/icons/Papirus/16x16/devices/
+    history_length = 10
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = ~/palemoon/palemoon -new-tab
+    always_run_script = true
+
+    browser = palemoon
+
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+Escape
+    context = ctrl+shift+period
+
+[urgency_low]
+    timeout = 3
+    background = "#2E3440"
+    foreground = "#f9f9f9"
+
+[urgency_normal]
+    timeout = 6
+    background = "#2E3440"
+    foreground = "#f9f9f9"
+
+[urgency_critical]
+    timeout = 0
+    background = "#2E3440"
+    foreground = "#f9f9f9"

@@ -1,0 +1,12 @@
+#!/bin/sh
+log="/var/log/autosync.log"
+if [ ! -f $log ]; then
+	touch $log
+	chmod 600 $log
+	chown root:root $log
+fi
+
+echo >> $log
+echo "*** autosync started! ($(date +'%d-%m-%Y %H:%M:%S'))" >> $log
+echo "*** running xbps-install -S" >> $log
+xbps-install -S >> $log 2>&1

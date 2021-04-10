@@ -1,0 +1,31 @@
+#!/bin/sh
+
+    mkdir "./output"
+for arg_file in "$@"; do
+    echo "converting: $arg_file"
+    ffprobe -i "$arg_file"  -v quiet -print_format json -show_format -show_streams -hide_banner > "./output/info" || exit 1
+
+    width=$(grep \"width\" ./output/info | grep -o '[0-9]\+')
+    height=$(grep \"height\" ./output/info | grep -o '[0-9]\+')
+    longname=$(grep \"filename\" ./output/info | sed -r --expression='s/\"filename\":|,|"| //g')
+    IFS='/' 
+    read -ra ADDR <<< "$longname" # str is read into an array as tokens separated by IFS
+    for i in "${ADDR[@]}"; do # access each element of array
+        filename=$i
+    done
+    echo $filename
+    echo $width x $height
+    if (( width>height )); then
+        echo "width bigger"
+        new_w=480/$height*$width
+        ffmpeg -i $filename -vf scale=480:480 -vcodec libx264 -profile:v baseline -y -level 3.1 -b:v 256KB -r 25 ./output/$filename
+    elif (( width<height )); then
+        echo "height bigger"
+        new_h=$height*480/$width
+        ffmpeg -i $filename -vf scale=480:480 -vcodec libx264 -profile:v baseline -y -level 3.1 -b:v 256KB -r 25 ./output/$filename
+    else
+        echo "equal"
+        ffmpeg -i $filename -vf scale=480:480 -vcodec libx264 -profile:v baseline -y -level 3.1 -b:v 256KB -r 25 ./output/$filename
+    fi
+    done
+

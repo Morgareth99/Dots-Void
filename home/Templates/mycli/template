@@ -1,0 +1,20 @@
+# Template file for 'mycli'
+pkgname=mycli
+version=1.24.1
+revision=1
+wrksrc=mycli-${version}
+build_style=python3-module
+#hostmakedepends="python3-setuptools"
+makedepends="python3-setuptools"
+depends="python python3-click python3-cryptography python3-Pygments	python3-prompt_toolkit \
+python3-sqlparse python3-configobj python3-cli_helpers python3-pyperclip python3-pyaes  python3-pymysql"
+short_desc="Terminal Client for MySQL"
+maintainer="Morgareth99 <morgareth@tutanota.com>"
+license="MIT"
+homepage="https://github.com/dbcli/mycli"
+distfiles="https://github.com/dbcli/mycli/archive/refs/tags/v1.24.1.tar.gz"
+checksum=4bac6b70b5c054819e3e5823427ebf7f1c4a6757feb15847e808d5280f5de61e
+
+post_install() {
+        vlicense LICENSE.txt
+}

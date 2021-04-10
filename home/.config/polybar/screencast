@@ -1,0 +1,22 @@
+#!/bin/bash
+
+XRES=$(xrandr --current | sed -n 's/.* connected \([0-9]*\)x\([0-9]*\)+.*/\1x\2/p')
+FILE=scast_$(date +%d%m%Y_%H.%M.%S).mp4
+DIR=$HOME/Videos/
+AUDIO_ENCODER="aac"
+VIDEO_ENCODER="libx264rgb"
+QUAL="ultrafast"
+FPS=30
+
+notify-send "Starting screencast ..." &&ffmpeg \
+  -video_size "$XRES" \
+  -framerate "$FPS" \
+  -f x11grab \
+  -i "$DISPLAY"  \
+  -c:v "$VIDEO_ENCODER"  \
+  -f alsa \
+  -i default \
+  -preset "$QUAL" \ 
+  -crf 0 \
+  -c:a "$AUDIO_ENCODER" \
+  "$DIR$FILE"

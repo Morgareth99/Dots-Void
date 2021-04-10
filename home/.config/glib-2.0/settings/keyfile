@@ -1,0 +1,39 @@
+[org/gtk/settings/file-chooser]
+window-position=(500, 195)
+window-size=(911, 681)
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=172
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+
+[org/gnome/charmap/window-state]
+size=(1904, 1030)
+
+[org/gnome/charmap]
+group-by='block'
+font='Mplus 1p Bold, Bold Italic 18'
+
+[org/gtk/settings/color-chooser]
+selected-color=(true, 0.1803921568627451, 0.20392156862745103, 0.25098039215686274, 1.0)
+custom-colors=[(0.1803921568627451, 0.20392156862745103, 0.25098039215686274, 1.0)]
+
+[org/mpdevil/mpdevil]
+profiles=['default']
+hosts=['localhost']
+ports=[6600]
+passwords=['']
+paths=['']
+regex=['']
+column-sizes=[33, 0, 203, 153, 174, 0, 0, 0]
+maximize=false
+width=1910
+height=983
+paned2=165
+mini-player=false
+paned1=193

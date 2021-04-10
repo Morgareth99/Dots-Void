@@ -1,0 +1,6 @@
+#!/bin/bash
+
+args="$*"
+[ $# -eq 0 ] && args='/dev/stdin'
+
+pygmentize -O style=rrt -f console256 -g $args
