@@ -84,6 +84,9 @@ complete -cf doas
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)" 
 
+# fuzzy completion
+[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
+
 # Autojump 
 source /etc/profile.d/autojump.sh  
 
@@ -163,9 +166,4 @@ function parse_git_dirty {
 
 
 PS1="\[\e[1;31m\]•\e[31m\] • \e[1;33m\]•\[\e[1;32m\] •\[\e[35m\]\n:: \[\e[32m\]\$(parse_git_branch)\[\e[00m\] "
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-#SILENT_JAVA_OPTIONS="$JDK_JAVA_OPTIONS"
-#unset JDK_JAVA_OPTIONS
 

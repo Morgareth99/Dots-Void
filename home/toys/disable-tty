@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for dir in /etc/sv/agetty-tty[3-4-5-6]; do
+   ( cd "$dir" && touch down )
+done
+

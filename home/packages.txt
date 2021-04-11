@@ -54,3 +54,14 @@ apparmor-vim
 alsa-utils
 ImageMagick
 earlyoom
+dbus
+xorg-minimal 
+xorg-fonts
+xf86-video-nouveau
+fzf
+curl
+opendoas
+git
+pkg-config
+make
+gcc 

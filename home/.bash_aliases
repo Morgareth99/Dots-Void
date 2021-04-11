@@ -1,7 +1,8 @@
 # Aliases
-#alias java='java "$SILENT_JAVA_OPTIONS"'
 
 alias ls='ls -F -h --color=auto --group-directories-first'
+
+alias startx='startx; exit'
 
 # Xbps (package management on Void Linux)
 alias xbi="doas xbps-install -S"        # Update lists without a package arg
