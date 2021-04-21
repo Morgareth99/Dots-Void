@@ -1,0 +1,38 @@
+# Global properties
+title-text: ""
+desktop-image: "boot.png"
+desktop-color: "#000000"
+terminal-font: "Unifont Regular 18"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
++ boot_menu {
+	left = 20%
+	top = 50%
+	width = 40%
+	height = 47%
+	item_color = "#00FF00"
+	selected_item_color = "#000000"
+	item_height = 40
+	item_spacing = 4
+	item_pixmap_style = "item_*.png"
+ 	selected_item_pixmap_style = "selected_item_*.png"
+}
+
+# Countdown message
++ label {
+	left = 0%
+	top = 97%
+	width = 100%
+	height = 3%
+	align = "center"
+	id = "__timeout__"
+	# EN
+	text = "Booting in %d seconds"
+	color = "#00FF00"
+	font = "Unifont Regular 18"
+}
